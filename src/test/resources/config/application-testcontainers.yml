@@ -12,9 +12,9 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
-    url: jdbc:tc:postgresql:13.3:///iacit_sample?TC_TMPFS=/testtmpfs:rw
-    username: iacit_sample
-    password:
+    url: jdbc:tc:postgresql:12:///iacit?TC_TMPFS=/testtmpfs:rw
+    username: iacit
+    password: iacit
     hikari:
       poolName: Hikari
       auto-commit: false

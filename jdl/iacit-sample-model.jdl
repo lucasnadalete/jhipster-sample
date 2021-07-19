@@ -1,0 +1,61 @@
+entity Company {
+    @Id id Long
+    name String required
+    cnpj String required
+    language Language
+}
+
+relationship OneToOne {
+	Company{country} to Country
+    Company{state} to State
+    Company{city} to City
+}
+
+relationship OneToMany {
+	Company{employee} to Employee
+}
+
+relationship ManyToOne {
+	Employee{company} to Company
+}
+
+entity Country {
+    @Id id Long
+    name String
+}
+
+entity City {
+    @Id id Long
+    name String
+}
+
+entity State {
+    @Id id Long
+    name String
+}
+
+entity Employee {
+    @Id id Long
+	firstName String required,
+	lastName String required,
+	email String required,
+	phoneNumber String,
+	hireDate LocalDate,
+	salary Long,
+	commissionPct Long
+    likedIn String
+    language Language
+}
+
+enum Language {
+    PORTUGUESE, ENGLISH
+}
+
+// Set pagination options
+paginate Company, Employee with infinite-scroll
+
+// Set service options to all except few
+service * with serviceImpl
+
+// Set dto creation option
+dto * with mapstruct
