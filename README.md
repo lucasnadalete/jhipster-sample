@@ -39,7 +39,14 @@ npm start
 
 ## How were the entities generated?
 
-1. Executing
+1. Install or open the VSCode IDE tool and install the extension **JHipster JDL**
+
+```
+(CMD + P or CTRL + P)
+ext install jhipster
+```
+
+2. Executing
 
 ```
 npm install -g generator-jhipster
