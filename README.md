@@ -36,3 +36,14 @@ npm start
 4. Access [http://localhost:9000/](http://localhost:9000/)
 
 5. Follow the instructions of init page
+
+## How were the entities generated?
+
+1. Executing
+
+```
+npm install -g generator-jhipster
+jhipster jdl ./jdl/iacit-sample-model.jdl
+```
+
+**Notes**: For the current JDL, entities have already been created, but it is possible to edit it and create new entities.
